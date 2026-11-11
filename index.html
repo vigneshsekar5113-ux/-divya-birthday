@@ -218,5 +218,72 @@ setInterval(function() {
   </div>
 </div>
  
+<!-- SECRET LOVE LETTER FOR DIVYA -->
+<section class="secret-letter">
+  <h2>💌 A Secret Letter For You</h2>
+  <p>My Dearest Moosakutty ❤️</p>
+
+  <button onclick="openLoveLetter()">
+    Open My Heart ❤️
+  </button>
+
+  <div id="loveLetter" style="display:none;">
+    <div class="letter-paper">
+      <h3>Dear Divya 🥰</h3>
+      <p>
+        Nee en life-la vanthathula irunthu,
+        en ovvoru naalum special aagiduchu.
+        Un sirippu enakku romba pidikkum.
+      </p>
+      <p>
+        Eppavum en kooda iru.
+        Unna romba romba love panren
+        en Moosakutty! ❤️
+      </p>
+      <h3>Forever Yours 💕</h3>
+      <p>Vignesh ❤️</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.secret-letter {
+  text-align: center;
+  padding: 30px 15px;
+  margin: 20px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg,#ffe0ec,#fff0f5);
+  color: #a52a58;
+}
+.secret-letter button {
+  background: #e84378;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.letter-paper {
+  background: white;
+  color: #a52a58;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 15px;
+  line-height: 1.8;
+  box-shadow: 0 4px 15px #e8a0bb;
+}
+</style>
+
+<script>
+function openLoveLetter() {
+  const letter = document.getElementById("loveLetter");
+  letter.style.display =
+    letter.style.display === "none" ? "block" : "none";
+}
+</script>
+<!-- END SECRET LOVE LETTER -->
+ 
+ 
 </body>
 </html>
