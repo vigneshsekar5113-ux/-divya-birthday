@@ -111,7 +111,6 @@ document.getElementById('openLetter').addEventListener('click',()=>document.getE
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
 document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='I love you ❤️ Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
-document.getElementById('songInput').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const player=document.getElementById('songPlayer');const u=URL.createObjectURL(f);player.src=u;player.style.display='block';player.play().catch(()=>{})});
 
 </script>
 </body>
