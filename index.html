@@ -66,7 +66,7 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
  <section class="section wrap">
   <h2>Our favourite memory 📸</h2>
   <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
-  <img class="photo" id="preview" alt="Vignesh and Divya together" src="moosakutty.png">
+  <img class="photo" id="preview" alt="Vignesh and Divya together" src="ind.html">
   <label class="upload">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
  </section>
  <section class="section wrap">
@@ -97,7 +97,7 @@ setInterval(sparkle,650);
 document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
-document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='Your wish deserves to come true! Happy Birthday, Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
+document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='I love you ❤️ Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
 document.getElementById('songInput').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const player=document.getElementById('songPlayer');const u=URL.createObjectURL(f);player.src=u;player.style.display='block';player.play().catch(()=>{})});
 
 </script>
