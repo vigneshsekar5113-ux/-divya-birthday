@@ -97,15 +97,19 @@ setInterval(sparkle,650);
 document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
-document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent=' Divya! 🎉💜 ';for(let i=0;i<24;i++)sparkle()});
+document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent=' I love you ❤️ Divya! 🎉💜 ';for(let i=0;i<24;i++)sparkle()});
 
 </script> 
 <audio id="bgmusic" loop>
-  <source src="bgmusic.mp3" type="audio/mp3">
+  <source src="bgmusic.mp3" type="audio">
 </audio>
-<button onclick="playMusic()">
+<button
+onclick="playMusic()">
   🎵 Play Music ❤️
 </button>
+ <button onclick="pauseMusic()">
+  ⏸️ Pasue music ❤️
+ </button>
 <script>
 function playMusic(){const music=document.getElementById("bgMusic");music.play();}
 </script>
