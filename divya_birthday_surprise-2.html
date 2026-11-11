@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d0a">
+<title>Happy Birthday, Moosakutty ✨</title>
+<style>
+:root{--gold:#f6d889;--gold2:#c99b42;--cream:#fff4d8;--bg:#100d0a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#49351c 0%,#1b140d 42%,#090807 100%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;text-align:center;overflow-x:hidden}
+.wrap{width:min(100% - 32px,720px);margin:auto}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:48px 0;position:relative}
+.hero:before,.hero:after{content:"✦";position:absolute;color:#d6ad59;opacity:.55;font-size:24px;animation:twinkle 2.8s infinite alternate}
+.hero:before{top:13%;left:12%}.hero:after{right:12%;bottom:17%;animation-delay:1s}
+.kicker{letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font:11px Arial,sans-serif}
+h1{font-size:clamp(42px,12vw,82px);line-height:.98;margin:20px 0 14px;color:var(--gold);text-shadow:0 0 28px #d49d3c55}
+.name{font-size:clamp(23px,6vw,35px);font-style:italic;color:#fff0c5}
+.sub{font:14px/1.8 Arial,sans-serif;color:#e7d8b8;max-width:480px;margin:20px auto}
+.btn{display:inline-block;border:1px solid var(--gold2);border-radius:99px;padding:13px 23px;color:#1a1208;background:linear-gradient(135deg,#f9e6a9,#c89537);font: bold 13px Arial,sans-serif;text-decoration:none;margin-top:18px;box-shadow:0 8px 28px #c8953733}
+.section{padding:65px 0}
+h2{font-size:clamp(28px,7vw,42px);color:var(--gold);font-weight:normal;margin:0 0 18px}
+.card{border:1px solid #c99b4266;background:linear-gradient(145deg,#2a2116cc,#120f0bdd);border-radius:24px;padding:28px 22px;box-shadow:0 18px 55px #0008}
+.heart{font-size:35px;color:#f2c96e;animation:pulse 1.6s infinite}
+.message{font-size:19px;line-height:1.85;color:#fff0ce}
+.small{font:13px/1.8 Arial,sans-serif;color:#d4c3a0}
+.photo{width:min(100%,330px);aspect-ratio:4/5;object-fit:cover;border-radius:20px;border:2px solid #d4ad5c;padding:5px;background:#20180e;display:block;margin:22px auto}
+.upload{font:12px Arial,sans-serif;color:#e8d5aa;margin:12px auto}
+.upload input{max-width:100%;margin-top:9px}
+footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
+.spark{position:fixed;top:-20px;color:#f6d889;pointer-events:none;animation:fall linear forwards;z-index:5}
+@keyframes twinkle{to{opacity:1;transform:scale(1.4)}}
+@keyframes pulse{50%{transform:scale(1.18)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <div class="kicker">A little birthday surprise for</div>
+  <h1>Happy Birthday</h1>
+  <div class="name">Divya, my Moosakutty 🥰</div>
+  <p class="sub">To the girl who makes ordinary days feel magical. Today, this little corner of the internet is only for you. ✨👀💜</p>
+  <a class="btn" href="#message">Open your surprise ✨</a>
+ </div>
+</header>
+<main>
+ <section class="section wrap" id="message">
+  <div class="card">
+   <div class="heart">♡</div>
+   <h2>For my Moosakutty</h2>
+   <p class="message">Happy Birthday, Divya! 💜<br>
+   Un smile eppovum ippadiye irukkanum. Unakku pidicha ella nalla vishayangalum un life-la nadakkanum. Nee santhoshama irukkanum — today, tomorrow, always. 🥰</p>
+   <p class="small">You are my favourite person, my sweetest thought, and my little bit of magic.</p>
+  </div>
+ </section>
+ <section class="section wrap">
+  <h2>Our favourite memory 📸</h2>
+  <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
+  <img class="photo" id="preview" alt="Your favourite memory" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23271d10'/%3E%3Ctext x='200' y='235' fill='%23f6d889' font-size='26' text-anchor='middle' font-family='Georgia'%3EYour photo here%3C/text%3E%3Ctext x='200' y='275' fill='%23d9bd80' font-size='18' text-anchor='middle'%3E♡ Moosakutty ♡%3C/text%3E%3C/svg%3E">
+  <label class="upload">Choose photo (optional)<br><input type="file" id="photoInput" accept="image/*"></label>
+ </section>
+ <section class="section wrap">
+  <div class="card">
+   <div class="heart">✨</div>
+   <h2>One last thing...</h2>
+   <p class="message">No matter how many birthdays come and go, I hope you never forget how special you are to me.</p>
+   <p class="name">Lots of love, always 💜</p>
+   <p class="small">— Your Vignesh</p>
+  </div>
+ </section>
+</main>
+<footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
+<script>
+const input=document.getElementById('photoInput'), preview=document.getElementById('preview');
+input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(f){preview.src=URL.createObjectURL(f)}});
+function sparkle(){const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(4+Math.random()*4)+'s';s.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),8500)}
+setInterval(sparkle,650);
+</script>
+</body>
+</html>
