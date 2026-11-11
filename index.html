@@ -98,21 +98,24 @@ document.getElementById('openLetter').addEventListener('click',()=>document.getE
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
 document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent=' I love you ❤️ Divya! 🎉💜 ';for(let i=0;i<24;i++)sparkle()});
+<\script>
 
-</script> 
 <audio id="bgmusic" loop>
-  <source src="bgmusic.mp3" type="audio/mp3">
+  <source src="bgmusic.mp3" type="audio/mpeg">
 </audio>
-<button
-onclick="playMusic()">
+
+<button onclick="playMusic()">
   🎵 Play Music ❤️
 </button>
- <button onclick="pauseMusic()">
-  ⏸️ Pasue music ❤️
- </button>
-<script>
-function playMusic(){const music=document.getElementById("bgMusic");music.play();}
-</script>
 
+<button onclick="pauseMusic()">
+  ⏸️ Pause Music ❤️
+</button>
+
+<script>
+function playMusic() {const music = document.getElementById("bgmusic");music.play();}
+function pauseMusic(){const music = document.getElementById("bgmusic");music.pause();}
+</script>
+ 
 </body>
 </html>
