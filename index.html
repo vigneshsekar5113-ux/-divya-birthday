@@ -103,15 +103,12 @@ document.getElementById('cutCake').addEventListener('click',()=>{document.getEle
 <audio id="bgmusic" loop>
   <source src="bgmusic.mp3" type="audio/mpeg">
 </audio>
-
 <button onclick="playMusic()">
   🎵 Play Music ❤️
 </button>
-
 <button onclick="pauseMusic()">
   ⏸️ Pause Music ❤️
 </button>
-
 <script>
 function playMusic() {const music = document.getElementById("bgmusic");music.play();}
 function pauseMusic(){const music = document.getElementById("bgmusic");music.pause();}
