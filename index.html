@@ -285,5 +285,57 @@ function openLoveLetter() {
 <!-- END SECRET LOVE LETTER -->
  
  
+<!-- MY FOREVER PROMISE -->
+<section id="foreverPromise" style="
+text-align:center;
+padding:30px 15px;
+margin:20px 10px;
+border-radius:20px;
+background:linear-gradient(135deg,#ffe0ec,#fff0f5);
+color:#bd2864;">
+
+<h2>💍 My Forever Promise</h2>
+<p>For My Moosakutty ❤️</p>
+
+<button onclick="showPromises()" style="
+background:#e84378;color:white;
+padding:13px 25px;border:0;
+border-radius:25px;font-size:16px;">
+Open My Promises 💗
+</button>
+
+<div id="promiseList" style="display:none;">
+  <p class="promise">🥰 I will always keep you happy.</p>
+  <p class="promise">❤️ I will support all your dreams.</p>
+  <p class="promise">🫶 I will stand with you forever.</p>
+  <p class="promise">💍 I will love you forever.</p>
+  <h2>Forever Yours, Vignesh ❤️</h2>
+</div>
+</section>
+
+<style>
+#foreverPromise .promise {
+  background:white;
+  padding:14px;
+  margin:12px 0;
+  border-radius:15px;
+  animation:promiseShow 1s ease both;
+}
+#foreverPromise .promise:nth-child(2) {animation-delay:.5s}
+#foreverPromise .promise:nth-child(3) {animation-delay:1s}
+#foreverPromise .promise:nth-child(4) {animation-delay:1.5s}
+@keyframes promiseShow {
+  from {opacity:0;transform:translateY(20px)}
+  to {opacity:1;transform:translateY(0)}
+}
+</style>
+
+<script>
+function showPromises() {
+  document.getElementById("promiseList").style.display="block";
+}
+</script>
+<!-- END MY FOREVER PROMISE -->
+ 
 </body>
 </html>
