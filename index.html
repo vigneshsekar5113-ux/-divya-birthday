@@ -53,82 +53,7 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
   <a class="btn" href="#message">Open your surprise ✨</a>
  </div>
 </header>
-<main>
- <section class="section wrap" id="message">
-  <div class="card">
-   <div class="heart">♡</div>
-   <h2>For my Moosakutty</h2>
-   <p class="message">Happy Birthday, Divya! 💜<br>
-   Un smile eppovum ippadiye irukkanum. Unakku pidicha ella nalla vishayangalum un life-la nadakkanum. Nee santhoshama irukkanum — today, tomorrow, always. 🥰</p>
-   <p class="small">You are my favourite person, my sweetest thought, and my little bit of magic.</p>
-  </div>
- </section>
- <section class="section wrap">
-  <h2>Our favourite memory 📸</h2>
-  <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
-  <img class="photo" id="preview" alt="Vignesh and Divya together" src="ind.html">
-  <label class="upload">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
- </section>
- <section class="section wrap">
-  <div class="card">
-   <div class="heart">✨</div>
-   <h2>One last thing...</h2>
-   <p class="message">No matter how many birthdays come and go, I hope you never forget how special you are to me.</p>
-   <p class="name">Lots of love, always 💜</p>
-   <p class="small">— Your Vignesh</p>
-  </div>
- </section>
- 
-<section class="section wrap">
-  <div class="card">
-    <h2>Our Beautiful Memories ❤️</h2>
-    <p>My Forever Moosakutty 🥰</p>
-
-    <img src="divya1.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
-
-    <img src="divya2.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
-
-    <img src="divya3.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
-
-    <h3>Every picture tells my love story 💕</h3>
-  </div>
-</section>
-</main>
-
-<section class="section wrap"><div class="card"><div class="heart">💌</div><h2>A little secret for you</h2><p class="small">A message waiting just for you, Moosakutty.</p><button class="secret-btn" id="openLetter">Open your secret letter 💜</button></div></section>
-<section class="section wrap"><div class="card"><div class="heart">🎂</div><h2>Make a birthday wish</h2><div class="cake" id="cake">🎂</div><p class="small" id="cakeText">Close your eyes, make a wish, and tap below ✨</p><button class="secret-btn" id="cutCake">Cut the cake 🎉</button></div>
-</section>
-<div class="modal" id="letterModal" role="dialog" aria-modal="true"><div class="letter"><div class="heart">💜</div><h2>My dearest Moosakutty,</h2>
-<p>Happy Birthday, Divya! 🥰<br><br>Un life-la nee ninaikkira ella aasaiyum niraiveranum. Un sirippu eppovum ippadiye azhaga irukkanum. Unakku kashtam varumbodhu un pakkathula naan irukkanum; un santhoshathula un kooda serndhu sirikkanum.<br><br>Namma rendu peroda memories enakku romba special. Innum neraya azhagana moments create pannuvom. Nee enakku romba precious, Moosakutty. 💜<br><br>Happy Birthday once again. Always keep smiling! ✨</p>
-<p class="name">With lots of love,<br>Vignesh ❤️</p><button class="secret-btn" id="closeLetter">Close 💌</button></div></div>
- 
-
-<audio id="bgmusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="document.getElementById('bgmusic').play()">
-  🎵 Play Our Love Song ❤️
-</button>
-
-<button onclick="document.getElementById('bgmusic').pause()">
-  ⏸️ Pause Music ❤️
-</button>
-
-<footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
-<script>
-const input=document.getElementById('photoInput'), preview=document.getElementById('preview');
-input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(f){preview.src=URL.createObjectURL(f)}});
-function sparkle(){const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(4+Math.random()*4)+'s';s.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),8500)}
-setInterval(sparkle,650);
-
-document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
-document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
-document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
-document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='I love you ❤️ Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
-
-</script>
- 
+  
 <!-- DIVYA 3D BIRTHDAY COUNTDOWN -->
 <div id="divya3d">
   <h2>🎂 Divya's Birthday 🎂</h2>
@@ -208,6 +133,81 @@ function updateDivyaCountdown(){
 }
 updateDivyaCountdown();
 setInterval(updateDivyaCountdown,1000);
+</script>
+<main>
+ <section class="section wrap" id="message">
+  <div class="card">
+   <div class="heart">♡</div>
+   <h2>For my Moosakutty</h2>
+   <p class="message">Happy Birthday, Divya! 💜<br>
+   Un smile eppovum ippadiye irukkanum. Unakku pidicha ella nalla vishayangalum un life-la nadakkanum. Nee santhoshama irukkanum — today, tomorrow, always. 🥰</p>
+   <p class="small">You are my favourite person, my sweetest thought, and my little bit of magic.</p>
+  </div>
+ </section>
+ <section class="section wrap">
+  <h2>Our favourite memory 📸</h2>
+  <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
+  <img class="photo" id="preview" alt="Vignesh and Divya together" src="ind.html">
+  <label class="upload">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
+ </section>
+ <section class="section wrap">
+  <div class="card">
+   <div class="heart">✨</div>
+   <h2>One last thing...</h2>
+   <p class="message">No matter how many birthdays come and go, I hope you never forget how special you are to me.</p>
+   <p class="name">Lots of love, always 💜</p>
+   <p class="small">— Your Vignesh</p>
+  </div>
+ </section>
+ 
+<section class="section wrap">
+  <div class="card">
+    <h2>Our Beautiful Memories ❤️</h2>
+    <p>My Forever Moosakutty 🥰</p>
+
+    <img src="divya1.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
+
+    <img src="divya2.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
+
+    <img src="divya3.jpg" style="width:100%;border-radius:18px;margin:10px 0;">
+
+    <h3>Every picture tells my love story 💕</h3>
+  </div>
+</section>
+</main>
+
+<section class="section wrap"><div class="card"><div class="heart">💌</div><h2>A little secret for you</h2><p class="small">A message waiting just for you, Moosakutty.</p><button class="secret-btn" id="openLetter">Open your secret letter 💜</button></div></section>
+<section class="section wrap"><div class="card"><div class="heart">🎂</div><h2>Make a birthday wish</h2><div class="cake" id="cake">🎂</div><p class="small" id="cakeText">Close your eyes, make a wish, and tap below ✨</p><button class="secret-btn" id="cutCake">Cut the cake 🎉</button></div>
+</section>
+<div class="modal" id="letterModal" role="dialog" aria-modal="true"><div class="letter"><div class="heart">💜</div><h2>My dearest Moosakutty,</h2>
+<p>Happy Birthday, Divya! 🥰<br><br>Un life-la nee ninaikkira ella aasaiyum niraiveranum. Un sirippu eppovum ippadiye azhaga irukkanum. Unakku kashtam varumbodhu un pakkathula naan irukkanum; un santhoshathula un kooda serndhu sirikkanum.<br><br>Namma rendu peroda memories enakku romba special. Innum neraya azhagana moments create pannuvom. Nee enakku romba precious, Moosakutty. 💜<br><br>Happy Birthday once again. Always keep smiling! ✨</p>
+<p class="name">With lots of love,<br>Vignesh ❤️</p><button class="secret-btn" id="closeLetter">Close 💌</button></div></div>
+ 
+
+<audio id="bgmusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('bgmusic').play()">
+  🎵 Play Our Love Song ❤️
+</button>
+
+<button onclick="document.getElementById('bgmusic').pause()">
+  ⏸️ Pause Music ❤️
+</button>
+
+<footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
+<script>
+const input=document.getElementById('photoInput'), preview=document.getElementById('preview');
+input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(f){preview.src=URL.createObjectURL(f)}});
+function sparkle(){const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(4+Math.random()*4)+'s';s.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),8500)}
+setInterval(sparkle,650);
+
+document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
+document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
+document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
+document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='I love you ❤️ Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
+
 </script>
  
 <style>
