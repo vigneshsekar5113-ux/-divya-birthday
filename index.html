@@ -66,7 +66,7 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
  <section class="section wrap">
   <h2>Our favourite memory 📸</h2>
   <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
-  <img class="photo" id="preview" alt="Vignesh and Divya together" src="ind.html">
+  <img class="photo" id="preview" alt="Vignesh and Divya together" src="moosakutty.png">
   <label class="upload">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
  </section>
  <section class="section wrap">
@@ -82,7 +82,7 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
 
 <section class="section wrap"><div class="card"><div class="heart">💌</div><h2>A little secret for you</h2><p class="small">A message waiting just for you, Moosakutty.</p><button class="secret-btn" id="openLetter">Open your secret letter 💜</button></div></section>
 <section class="section wrap"><div class="card"><div class="heart">🎂</div><h2>Make a birthday wish</h2><div class="cake" id="cake">🎂</div><p class="small" id="cakeText">Close your eyes, make a wish, and tap below ✨</p><button class="secret-btn" id="cutCake">Cut the cake 🎉</button></div>
-<div class="audio-box"><h2 style="font-size:25px">A song for you 🎵</h2><p class="small">Choose a song saved on your phone to play.</p><input type="bgmusic.mp3" id="songInput" accept="audio/*"><audio id="songPlayer" controls style="display:none;width:100%;margin-top:12px"></audio></div></section>
+<div class="audio-box"><h2 style="font-size:25px">A song for you 🎵</h2><p class="small">Choose a song saved on your phone to play.</p><input type="file" id="songInput" accept="audio/*"><audio id="songPlayer" controls style="display:none;width:100%;margin-top:12px"></audio></div></section>
 <div class="modal" id="letterModal" role="dialog" aria-modal="true"><div class="letter"><div class="heart">💜</div><h2>My dearest Moosakutty,</h2>
 <p>Happy Birthday, Divya! 🥰<br><br>Un life-la nee ninaikkira ella aasaiyum niraiveranum. Un sirippu eppovum ippadiye azhaga irukkanum. Unakku kashtam varumbodhu un pakkathula naan irukkanum; un santhoshathula un kooda serndhu sirikkanum.<br><br>Namma rendu peroda memories enakku romba special. Innum neraya azhagana moments create pannuvom. Nee enakku romba precious, Moosakutty. 💜<br><br>Happy Birthday once again. Always keep smiling! ✨</p>
 <p class="name">With lots of love,<br>Vignesh ❤️</p><button class="secret-btn" id="closeLetter">Close 💌</button></div></div>
@@ -97,8 +97,9 @@ setInterval(sparkle,650);
 document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
-document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent=' I love you ❤️ Divya! 🎉💜 ';for(let i=0;i<24;i++)sparkle()});
+document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='Your wish deserves to come true! Happy Birthday, Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
+document.getElementById('songInput').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const player=document.getElementById('songPlayer');const u=URL.createObjectURL(f);player.src=u;player.style.display='block';player.play().catch(()=>{})});
+
 </script>
- 
 </body>
 </html>
