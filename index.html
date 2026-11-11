@@ -82,10 +82,23 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
 
 <section class="section wrap"><div class="card"><div class="heart">💌</div><h2>A little secret for you</h2><p class="small">A message waiting just for you, Moosakutty.</p><button class="secret-btn" id="openLetter">Open your secret letter 💜</button></div></section>
 <section class="section wrap"><div class="card"><div class="heart">🎂</div><h2>Make a birthday wish</h2><div class="cake" id="cake">🎂</div><p class="small" id="cakeText">Close your eyes, make a wish, and tap below ✨</p><button class="secret-btn" id="cutCake">Cut the cake 🎉</button></div>
-<div class="audio-box"><h2 style="font-size:25px">A song for you 🎵</h2><p class="small">Choose a song saved on your phone to play.</p><input type="file" id="songInput" accept="audio/*"><audio id="songPlayer" controls style="display:none;width:100%;margin-top:12px"></audio></div></section>
+</section>
 <div class="modal" id="letterModal" role="dialog" aria-modal="true"><div class="letter"><div class="heart">💜</div><h2>My dearest Moosakutty,</h2>
 <p>Happy Birthday, Divya! 🥰<br><br>Un life-la nee ninaikkira ella aasaiyum niraiveranum. Un sirippu eppovum ippadiye azhaga irukkanum. Unakku kashtam varumbodhu un pakkathula naan irukkanum; un santhoshathula un kooda serndhu sirikkanum.<br><br>Namma rendu peroda memories enakku romba special. Innum neraya azhagana moments create pannuvom. Nee enakku romba precious, Moosakutty. 💜<br><br>Happy Birthday once again. Always keep smiling! ✨</p>
 <p class="name">With lots of love,<br>Vignesh ❤️</p><button class="secret-btn" id="closeLetter">Close 💌</button></div></div>
+ 
+
+<audio id="bgmusic" loop>
+  <source src="bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('bgmusic').play()">
+  🎵 Play Our Love Song ❤️
+</button>
+
+<button onclick="document.getElementById('bgmusic').pause()">
+  ⏸️ Pause Music ❤️
+</button>
 
 <footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
 <script>
