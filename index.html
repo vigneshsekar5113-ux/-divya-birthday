@@ -36,6 +36,15 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
+  <audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+<button onclick="document.getElementById('bgMusic').play()">
+  ❤️ Play Love Music
+</button>
+<button onclick="document.getElementById('bgMusic').pause()">
+  ⏸ Pause Music
+</button>
 <body>
 <header class="hero">
  <div class="wrap">
@@ -71,15 +80,6 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
    <p class="small">— Your Vignesh</p>
   </div>
  </section>
- <audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-<button onclick="document.getElementById('bgMusic').play()">
-  ❤️ Play Love Music
-</button>
-<button onclick="document.getElementById('bgMusic').pause()">
-  ⏸ Pause Music
-</button>
 </main>
 <footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
 <script>
