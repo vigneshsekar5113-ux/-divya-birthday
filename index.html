@@ -129,6 +129,48 @@ document.getElementById('cutCake').addEventListener('click',()=>{document.getEle
 
 </script>
  
+<!-- DIVYA SURPRISE BUTTON -->
+<section style="text-align:center; padding:35px 15px;">
+  <h2 style="color:#ff4081;">A Special Surprise for You 🎁</h2>
+
+  <button onclick="openSurprise()"
+  style="background:#ff4081;color:white;padding:15px 28px;
+  border:none;border-radius:30px;font-size:18px;">
+    🎁 Open My Surprise
+  </button>
+
+  <div id="surpriseMessage" style="display:none; margin-top:25px;">
+    <h1>❤️🥰💖</h1>
+    <h2 style="color:#e91e63;">I Love You Moosakutty!</h2>
+    <p style="font-size:18px;">
+      You are my happiness, my world, my everything. ❤️
+    </p>
+    <h2>Forever Yours 💍</h2>
+  </div>
+</section>
+
+<script>
+function openSurprise() {
+  document.getElementById("surpriseMessage").style.display = "block";
+  for(let i=0; i<25; i++) {
+    let heart = document.createElement("span");
+    heart.innerHTML = "❤️";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.top = "-30px";
+    heart.style.fontSize = "25px";
+    heart.style.zIndex = "9999";
+    heart.style.transition = "transform 3s, opacity 3s";
+    document.body.appendChild(heart);
+    setTimeout(() => {
+      heart.style.transform = "translateY(100vh) rotate(360deg)";
+      heart.style.opacity = "0";
+    }, 100);
+    setTimeout(() => heart.remove(), 3200);
+  }
+}
+</script>
+ 
 <style>
 .heart {
   position: fixed;
