@@ -34,17 +34,15 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
 @keyframes pulse{50%{transform:scale(1.18)}}
 @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+
+.secret-btn{cursor:pointer;border:1px solid var(--gold2);border-radius:99px;padding:13px 22px;background:transparent;color:var(--gold);font:bold 13px Arial,sans-serif;margin:8px}
+.modal{display:none;position:fixed;inset:0;background:#050403ef;z-index:20;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}.letter{max-width:520px;width:100%;background:linear-gradient(145deg,#3a2b17,#17110a);border:1px solid var(--gold);border-radius:22px;padding:28px 22px}
+.letter p{font-size:17px;line-height:1.8;color:#fff0ce}.cake{font-size:76px;margin:12px 0;transition:transform .3s}.cake.cut{transform:rotate(-8deg) scale(1.12)}
+.audio-box{margin:18px auto 0;padding:16px;border:1px solid #c99b4266;border-radius:18px;max-width:420px}
+
 </style>
 </head>
-  <audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mp3">
-</audio>
-<button onclick="document.getElementById('bgMusic').play()">
-  ❤️ Play Love Music
-</button>
-<button onclick="document.getElementById('bgMusic').pause()">
-  ⏸ Pause Music
-</button>
 <body>
 <header class="hero">
  <div class="wrap">
@@ -68,8 +66,8 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
  <section class="section wrap">
   <h2>Our favourite memory 📸</h2>
   <p class="small">Add a photo of her or a favourite photo together from your phone.</p>
-  <img class="photo" id="preview" alt="Vignesh and Divya together" src="ind.html">
-  <label class="m">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
+  <img class="photo" id="preview" alt="Vignesh and Divya together" src="moosakutty.png">
+  <label class="upload">Our special memory 💜<br><input type="file" id="photoInput" accept="image/*"></label>
  </section>
  <section class="section wrap">
   <div class="card">
@@ -81,21 +79,27 @@ footer{padding:30px 16px 45px;color:#bca77e;font:12px Arial,sans-serif}
   </div>
  </section>
 </main>
+
+<section class="section wrap"><div class="card"><div class="heart">💌</div><h2>A little secret for you</h2><p class="small">A message waiting just for you, Moosakutty.</p><button class="secret-btn" id="openLetter">Open your secret letter 💜</button></div></section>
+<section class="section wrap"><div class="card"><div class="heart">🎂</div><h2>Make a birthday wish</h2><div class="cake" id="cake">🎂</div><p class="small" id="cakeText">Close your eyes, make a wish, and tap below ✨</p><button class="secret-btn" id="cutCake">Cut the cake 🎉</button></div>
+<div class="audio-box"><h2 style="font-size:25px">A song for you 🎵</h2><p class="small">Choose a song saved on your phone to play.</p><input type="file" id="songInput" accept="audio/*"><audio id="songPlayer" controls style="display:none;width:100%;margin-top:12px"></audio></div></section>
+<div class="modal" id="letterModal" role="dialog" aria-modal="true"><div class="letter"><div class="heart">💜</div><h2>My dearest Moosakutty,</h2>
+<p>Happy Birthday, Divya! 🥰<br><br>Un life-la nee ninaikkira ella aasaiyum niraiveranum. Un sirippu eppovum ippadiye azhaga irukkanum. Unakku kashtam varumbodhu un pakkathula naan irukkanum; un santhoshathula un kooda serndhu sirikkanum.<br><br>Namma rendu peroda memories enakku romba special. Innum neraya azhagana moments create pannuvom. Nee enakku romba precious, Moosakutty. 💜<br><br>Happy Birthday once again. Always keep smiling! ✨</p>
+<p class="name">With lots of love,<br>Vignesh ❤️</p><button class="secret-btn" id="closeLetter">Close 💌</button></div></div>
+
 <footer>Made with love, just for Divya · Moosakutty ✨👀💜</footer>
 <script>
 const input=document.getElementById('photoInput'), preview=document.getElementById('preview');
 input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(f){preview.src=URL.createObjectURL(f)}});
 function sparkle(){const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(4+Math.random()*4)+'s';s.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),8500)}
 setInterval(sparkle,650);
-<\script>
 
-  
-  document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
+document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
 document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='Your wish deserves to come true! Happy Birthday, Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
 document.getElementById('songInput').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const player=document.getElementById('songPlayer');const u=URL.createObjectURL(f);player.src=u;player.style.display='block';player.play().catch(()=>{})});
 
-  
+</script>
 </body>
 </html>
