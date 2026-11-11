@@ -93,13 +93,12 @@ const input=document.getElementById('photoInput'), preview=document.getElementBy
 input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(f){preview.src=URL.createObjectURL(f)}});
 function sparkle(){const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(4+Math.random()*4)+'s';s.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),8500)}
 setInterval(sparkle,650);
+ <\script>
 
 document.getElementById('openLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.add('show'));
 document.getElementById('closeLetter').addEventListener('click',()=>document.getElementById('letterModal').classList.remove('show'));
 document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.id==='letterModal')e.currentTarget.classList.remove('show')});
 document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent=' I love you ❤️ Divya! 🎉💜 ';for(let i=0;i<24;i++)sparkle()});
-
- <\script>
   
 <audio id="bgmusic" loop>
   <source src="bgmusic.mp3" type="audio/mpeg">
