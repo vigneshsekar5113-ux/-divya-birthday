@@ -113,5 +113,58 @@ document.getElementById('letterModal').addEventListener('click',e=>{if(e.target.
 document.getElementById('cutCake').addEventListener('click',()=>{document.getElementById('cake').classList.toggle('cut');document.getElementById('cakeText').textContent='I love you ❤️ Divya! 🎉💜';for(let i=0;i<24;i++)sparkle()});
 
 </script>
+ 
+<style>
+.love-letter {
+  text-align: center;
+  padding: 25px 15px;
+  background: #fff0f5;
+  border-radius: 20px;
+  margin: 20px 10px;
+}
+.love-letter button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 17px;
+}
+.letter-content {
+  display: none;
+  background: white;
+  color: #9c2450;
+  padding: 22px;
+  margin-top: 20px;
+  border-radius: 15px;
+  line-height: 1.8;
+}
+</style>
+
+<div class="love-letter">
+  <h2>💌 A Letter For You</h2>
+  <p>My Moosakutty 🥰</p>
+
+  <button onclick="document.getElementById('myLetter').style.display='block'; this.style.display='none'">
+    Open My Letter ❤️
+  </button>
+
+  <div class="letter-content" id="myLetter">
+    <h2>My Dear Divya ❤️</h2>
+    <p>
+      You are not just a part of my life,
+      you are my happiness. 🥹
+    </p>
+    <p>
+      Every moment with you is special.
+      I want to see you smile forever.
+    </p>
+    <p>
+      I Love You So Much, Moosakutty! ❤️
+    </p>
+    <h3>Forever Yours 💍</h3>
+  </div>
+</div>
+ 
 </body>
 </html>
